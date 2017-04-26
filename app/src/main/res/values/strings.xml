@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Feed News</string>
+    <string name="title_activity_drawer_layout">DrawerLayout</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">Earthquake Settings</string>
+    <string name="world">World</string>
+    <string name="local">Local</string>
+    <string name="economics">Economics</string>
+    <string name="tech">Science and Technology</string>
+    <string name="sports">Sports</string>
+    <string name="health">Health</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="sth_wrong">Something Wrong</string>
+</resources>
