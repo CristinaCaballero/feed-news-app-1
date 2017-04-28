@@ -35,14 +35,24 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private ListView news_list;
     private int count = 10;
     private NewsAdapter adapter;
-    private String WORLD = "world";
-    private String LOCAL = "local";
-    private String ECONOMICS = "economics";
-    private String TECH = "technology";
-    private String SPORTS = "sports";
-    private String HEALTH = "health";
+//    private String WORLD = "world";
+//    private String LOCAL = "local";
+//    private String ECONOMICS = "economics";
+//    private String TECH = "technology";
+//    private String SPORTS = "sports";
+//    private String HEALTH = "health";
+//    private String SECTION = WORLD;
+//    private String URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+
+
+    private String WORLD = "mundo";
+    private String LOCAL = "peru";
+    private String ECONOMICS = "economia";
+    private String TECH = "ciencia";
+    private String SPORTS = "deportes";
+    private String HEALTH = "salud";
     private String SECTION = WORLD;
-    private String URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+    private String URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
     private CardView newsCard;
     private CardView readmore;
     private ProgressBar loading;
@@ -94,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -104,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -114,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -124,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -134,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -144,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         count = 10;
                         if (checkInternet()) {
                             readmore.setVisibility(View.VISIBLE);
-                            URL = "https://content.guardianapis.com/search?&section=" + SECTION + "&page-size=" + count + "&show-fields=thumbnail,trailText&show-tags=contributor&api-key=6de1a8cd-9a9d-4016-8273-26de99416430";
+                            URL = "http://54.70.83.195:3000/lista?categoria="+SECTION;
                             adapter.clear();
                             getLoaderManager().restartLoader(0, null, MainActivity.this);
                         }
@@ -164,10 +174,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                                              @Override
                                              public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                                  News current_news = adapter.getItem(position);
-                                                 Uri bookUri = Uri.parse(current_news.getUrl());
+                                                 //Uri bookUri = Uri.parse(current_news.getUrl());
 
-                                                 Intent news_intent = new Intent(Intent.ACTION_VIEW, bookUri);
-                                                 startActivity(news_intent);
+                                                 //Intent news_intent = new Intent(Intent.ACTION_VIEW, bookUri);
+                                                 //startActivity(news_intent);
                                              }
                                          }
 

@@ -1,6 +1,7 @@
 package com.example.android.feednews;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -99,33 +100,33 @@ public class QueryUtils {
         List<News> news = new ArrayList<>();
 
         try {
+            System.out.print(jsonResponse);
             JSONObject news_object = new JSONObject(jsonResponse);
-            JSONObject response = news_object.getJSONObject("response");
-            JSONArray results = response.getJSONArray("results");
+            JSONArray results = news_object.getJSONArray("noticias");
             for (int i = 1; i < results.length(); i++) {
                 JSONObject newsItem = results.getJSONObject(i);
-                String sectionName = newsItem.getString("sectionName");
-                String date = newsItem.getString("webPublicationDate");
-                String title = newsItem.getString("webTitle");
-                String url = newsItem.getString("webUrl");
-                JSONObject fields = newsItem.getJSONObject("fields");
-                String trailText = fields.getString("trailText");
-                if (trailText.contains("<strong>")) {
-                    trailText = trailText.replaceAll("<strong>", "");
-                    trailText = trailText.replaceAll("</strong>", "");
-
-                }
-                String thumbnail = "http://www.ufscnet.com/wp-content/themes/tisya/images/no-image.jpg";
-                if (fields.has("thumbnail")) {
-                    thumbnail = fields.getString("thumbnail");
-                }
-                JSONArray tags = newsItem.getJSONArray("tags");
-                String contributor = "";
-                if (tags.length() != 0) {
-                    JSONObject tags_object = tags.getJSONObject(0);
-                    contributor = "By " + tags_object.getString("webTitle");
-                }
-                news.add(new News(title, trailText, thumbnail, date, contributor, sectionName, url));
+                String id = newsItem.getString("_id");
+                String date = newsItem.getString("fecha");
+                String title = newsItem.getString("titulo");
+                //String url = newsItem.getString("webUrl");
+//                JSONObject fields = newsItem.getJSONObject("fields");
+                String thumbnail = newsItem.getString("imagen");
+//                if (trailText.contains("<strong>")) {
+//                    trailText = trailText.replaceAll("<strong>", "");
+//                    trailText = trailText.replaceAll("</strong>", "");
+//
+//                }
+//                String thumbnail = "http://www.ufscnet.com/wp-content/themes/tisya/images/no-image.jpg";
+//                if (fields.has("thumbnail")) {
+//                    thumbnail = fields.getString("imagen");
+//                }
+//                JSONArray tags = newsItem.getJSONArray("tags");
+//                String contributor = "";
+//                if (tags.length() != 0) {
+//                    JSONObject tags_object = tags.getJSONObject(0);
+//                    contributor = "By " + tags_object.getString("webTitle");
+//                }
+                news.add(new News(id,title, thumbnail, date));
             }
 
         } catch (JSONException e) {

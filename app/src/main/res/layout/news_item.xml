@@ -29,31 +29,13 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/news1" />
 
-            <TextView
-                android:id="@+id/news_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                tools:text="Section" />
 
-            <TextView
-                android:id="@+id/news_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/news_image"
-                android:padding="10dp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                tools:text="Desciption" />
 
             <TextView
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@id/news_description"
+                android:layout_below="@id/news_image"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:background="#BDBDBD" />
@@ -72,21 +54,10 @@
                 tools:text="Date" />
 
             <TextView
-                android:id="@+id/news_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/news_description"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="20dp"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
-                tools:text="By contributor" />
-
-            <TextView
                 android:id="@+id/news_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/news_author"
+                android:layout_above="@id/line"
                 android:layout_marginStart="10dp"
                 android:padding="10dp"
                 android:textColor="#FFFFFF"

@@ -34,20 +34,11 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView title = (TextView) listItemView.findViewById(R.id.news_title);
         title.setText(currentNews.getTitle());
 
-        TextView description = (TextView) listItemView.findViewById(R.id.news_description);
-        description.setText(currentNews.getDescription());
-
-        TextView author = (TextView) listItemView.findViewById(R.id.news_author);
-        author.setText(currentNews.getAuthor());
-
         TextView date = (TextView) listItemView.findViewById(R.id.news_hoursPast);
         date.setText(currentNews.getHoursPast());
 
         ImageView image = (ImageView) listItemView.findViewById(R.id.news_image);
         Picasso.with(getContext()).load(currentNews.getImageResource()).into(image);
-
-        TextView section = (TextView) listItemView.findViewById(R.id.news_category);
-        section.setText(currentNews.getCategory());
 
         return listItemView;
     }
