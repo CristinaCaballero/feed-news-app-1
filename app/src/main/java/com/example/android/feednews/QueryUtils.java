@@ -103,7 +103,7 @@ public class QueryUtils {
             System.out.print(jsonResponse);
             JSONObject news_object = new JSONObject(jsonResponse);
             JSONArray results = news_object.getJSONArray("noticias");
-            for (int i = 1; i < results.length(); i++) {
+            for (int i = 0; i < results.length(); i++) {
                 JSONObject newsItem = results.getJSONObject(i);
                 String id = newsItem.getString("_id");
                 String date = newsItem.getString("fecha");
