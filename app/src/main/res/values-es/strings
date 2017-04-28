@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Feed News</string>
+    <string name="title_activity_drawer_layout">DrawerLayout</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">Earthquake Settings</string>
+    <string name="world">Mundo</string>
+    <string name="local">Perú</string>
+    <string name="economics">Economía</string>
+    <string name="tech">Ciencia y Tecnología</string>
+    <string name="sports">Deportes</string>
+    <string name="health">Salud</string>
+    <string name="no_internet">No hay conexión a internet</string>
+    <string name="sth_wrong">Error</string>
+</resources>
